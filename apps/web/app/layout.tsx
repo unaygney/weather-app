@@ -2,8 +2,6 @@ import { bricolage, dmSans } from "@/lib/font";
 
 import "@workspace/ui/globals.css";
 
-import { Providers } from "@/components/providers";
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -11,9 +9,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${dmSans.variable} ${bricolage.variable} font-sans antialiased `}>
-        <Providers>{children}</Providers>
-      </body>
+      <body className={`${dmSans.variable} ${bricolage.variable} font-sans antialiased `}>{children}</body>
     </html>
   );
 }
